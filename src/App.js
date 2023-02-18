@@ -26,7 +26,7 @@ const App = () => {
       'Auth': `${username}:${password}`
     };
     try {
-      const response = await fetch('https://2mc.us/saad.php', { headers });
+      const response = await fetch('https://2mc.us/saad.php', { headers, mode: 'no-cors' });
       const data = await response.json();
       if (data.status === 'ok') {
         setResponseData(data)
@@ -34,6 +34,7 @@ const App = () => {
         setErrorMessage(data.message);
       }
     } catch (error) {
+      console.log('error', error)
       setErrorMessage('Something went wrong!');
     }
   };
