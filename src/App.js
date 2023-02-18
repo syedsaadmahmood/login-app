@@ -34,7 +34,6 @@ const App = () => {
         setErrorMessage(data.message);
       }
     } catch (error) {
-      console.log('error', error)
       setErrorMessage('Something went wrong!');
     }
   };
